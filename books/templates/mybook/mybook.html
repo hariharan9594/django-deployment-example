@@ -1,0 +1,30 @@
+<html>
+    {% extends 'mybook/base.html' %}
+    
+        {% block bodyblock %}
+        
+        <div class="container">
+        <div class="jumbotron">
+            <h1>Book details</h1>
+            {% if  books%}
+            <table class="table table-striped">
+                <thead>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>quantity</th>
+                </thead>
+                {% for b in books  %}
+                <tr>
+                    <td>{{b.Name}}</td>
+                    <td>{{b.Author}}</td>
+                    <td>{{b.quantity}}</td>
+                    <td><a href="/mybook/u/{{b.id}}">Update</a></td>
+                    <td><a href="/mybook/d/{{b.id}}">delete</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% endif %}
+          </div>
+        </div>
+
+        {% endblock bodyblock %}

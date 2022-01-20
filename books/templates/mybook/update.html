@@ -1,0 +1,16 @@
+<html>
+  {% extends 'mybook/base.html' %}
+  {% block bodyblock %}
+  <div class="container">
+    <div class="jumbotron">
+        <h1>Update details</h1>
+        <form method = 'POST'>
+          <p>Name: <input type="text" name="Name" value="{{f.Name}}"></p>
+          <p>Author: <input type="text" name="Author" value="{{f.Author}}"></p>
+          <p>quantity<input type="text" name="quantity" value="{{f.quantity}}"></p>    
+            {% csrf_token %}
+          <input type="submit" value= "save">
+        </form>
+      </div>
+    </div>  
+  {% endblock bodyblock %}

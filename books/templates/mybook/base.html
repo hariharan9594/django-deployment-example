@@ -1,0 +1,21 @@
+<html>
+    <head>
+        {% load static %}
+        <title>
+            Update management
+        </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    </head>
+    <body>
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container">
+                <a href="/"><button type="button" class="btn btn-default navbar-btn">Home</button></a>
+                <a href="/mybook/b"> <button type="button" class="btn btn-default navbar-btn">mybooks</button></a>
+                <a href="/admin"><button type="button" class="btn btn-default navbar-btn">Admin</button></a>
+            </div>
+          </nav>
+        {% block bodyblock %}
+        
+        {% endblock bodyblock %}
+    </body>
+</html>
